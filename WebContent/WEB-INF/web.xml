@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>hiyes</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+    <param-name>poiWebservice</param-name>
+<!--     <param-value>http://localhost:8080/Webapi/</param-value> -->
+    <param-value>http://www.a-ber.com.tw/Webapi/</param-value>
+  </context-param>
+  <context-param>
+    <param-name>token</param-name>
+    <param-value>1bc810fce28284b384b88d1803c842651b62f96c</param-value>
+  </context-param>
+  <context-param>
+    <param-name>buildingIconPath</param-name>
+    <param-value>/data/SBI/poiIcon/</param-value>
+  </context-param>
+  <context-param>
+    <param-name>poiIconPath</param-name>
+    <param-value>/data/SBI/poiIcon/</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>poiHiyes</servlet-name>
+    <servlet-class>tw.com.PoiHiyes</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>poiHiyes</servlet-name>
+    <url-pattern>/poiHiyes.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>sendMail</servlet-name>
+    <servlet-class>tw.com.SendMail</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sendMail</servlet-name>
+    <url-pattern>/sendMail.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>image</servlet-name>
+    <servlet-class>tw.com.image</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>image</servlet-name>
+    <url-pattern>/image.do</url-pattern>
+  </servlet-mapping>
+</web-app>
